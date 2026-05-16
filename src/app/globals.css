@@ -1,0 +1,84 @@
+@import "tailwindcss";
+@import "./components.css";
+
+:root {
+    --mainBg: #111315;
+    --dark: #1A1D1F;
+    --stroke: #1F272A;
+    --white: #F7F9FA;
+    --blue: #1C92E0;
+    --divider: #3D4549;
+    --grey: #232627;
+    --green:#82CC27
+
+}
+
+* {
+    flex-shrink: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #4facfe #1e1e2f;
+
+}
+
+body {
+    min-height: 100vh;
+    background: var(--mainBg);
+    color: var(--white);
+    font-family: Poppins, Helvetica, sans-serif;
+}
+
+/* Scrollbar umumiy eni */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Orqa fon */
+::-webkit-scrollbar-track {
+    background: #1e1e2f;
+    border-radius: 10px;
+}
+
+/* Scroll harakatlanadigan qismi */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #0b406f, #00767c);
+    border-radius: 10px;
+    border: 2px solid #1e1e2f;
+    
+}
+
+/* Hover holati */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #027929, #018169);
+}
+
+.header {
+    @apply flex shrink-0 lg:justify-between justify-center gap-y-3 flex-wrap items-center h-auto bg-(--dark) mt-5 mx-8;
+    @apply rounded-2xl p-5 border border-(--stroke) min-w-fit;
+    
+}
+
+/* -------------titelar------------- */
+
+.title14 {
+    @apply text-[14px] font-medium;
+
+}
+
+.title32 {
+    @apply text-[32px] text-white font-bold;
+}
+
+
+/* --------------Textlar------------- */
+.text12{
+    @apply text-[12px] text-[#888888]
+}
+.text14 {
+    @apply text-[14px] text-[#888888];
+}
+.text15{
+    @apply text-[15px] text-[#9DA1A3]
+}
+
+
+

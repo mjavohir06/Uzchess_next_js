@@ -1,0 +1,80 @@
+@import "tailwindcss";
+/* ------------containerlar----------------- */
+
+.container3 {
+    @apply w-full grid grid-cols-1 gap-6 lg:grid-cols-[repeat(2,auto)] sm:justify-center;
+    
+}
+
+.container2 {
+    @apply w-full grid grid-cols-1 gap-6 sm:justify-center;
+}
+
+@media (min-width:1400px) {
+    .container3 {
+        @apply grid-cols-[repeat(3,auto)];
+    }
+
+    .container2 {
+        @apply grid-cols-[repeat(2,auto)];
+
+    }
+}
+
+nav,
+a {
+    @apply hover:cursor-pointer
+}
+
+
+/* -----------Ustunlar--------------- */
+.ustun1, .ustun2, .ustun3 {
+    @apply w-81.5 grid gap-6 content-start;
+    article{
+        @apply rounded-lg bg-(--dark) w-full overflow-clip
+    }
+}
+.ustun2{
+    @apply w-169
+}
+
+.ustun12 {
+    @apply grid gap-6 content-start lg:w-256.5 w-full;
+    article{
+        @apply rounded-lg bg-(--dark) w-full overflow-clip
+    }
+}
+
+/* -------------Telefon nomer uchun input------------------ */
+/* html skeleti
+
+<div className="telinput">
+    <div>
+        <p>+998</p>
+    </div>
+    <div>
+        <input type="text" placeholder="_ _  _ _ _  _ _  _ _" />
+    </div>
+</div>
+
+*/
+
+.telinput{
+    @apply flex bg-[#1A1D1F] rounded-lg items-center border border-[#36393B] h-max focus-within:border-white overflow-clip;
+
+    div:first-child{
+        @apply w-14 flex items-center justify-center;
+    }
+    div:last-child{
+        @apply w-full bg-[#13181C];
+
+        input{
+            @apply h-11 w-full outline-0 pl-4;
+        }
+    }
+}
+.logininput{
+    @apply w-full h-11 bg-[#13181C] outline-0 border border-[#36393B] rounded-lg pl-4;
+    @apply focus:border-white;
+    
+}
