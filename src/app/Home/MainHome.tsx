@@ -1,4 +1,4 @@
-"use client"
+
 
 import LoyihaRivoji from "@/components/repeated/LoyihaRivoji"
 import Ustun1Home from "./components/Ustun1Home"
@@ -7,17 +7,22 @@ import Yoshlarportali from "@/components/repeated/Yoshlarportali"
 import TopKitoblar from "@/components/repeated/TopKitoblar"
 
 const MainHome = () => {
+
+  
+
   return (
-    <section className="container3 mt-6">
-        <Ustun1Home/>
-        <Ustun2Home/>
+    
+      <section className="container3 mt-6">
+        <Ustun1Home />
+        <Ustun2Home />
         <div className="ustun3">
-            <LoyihaRivoji/>
-            <Yoshlarportali/>
-            <TopKitoblar/>
+          <LoyihaRivoji />
+          <Yoshlarportali />
+          <TopKitoblar />
         </div>
-      
-    </section>
+
+      </section>
+    
   )
 }
 

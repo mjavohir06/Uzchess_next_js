@@ -1,32 +1,34 @@
 export interface KursType {
-   id: number;
-
-  
+  id: number;
   author: Author;
-
-  
   category: Category;
-
-  
   language: Language;
-
   difficulty: Daraja;
-
   title: string;
-
   image: string;
-
   price: number;
-
   newPrice?: number;
-
   rating?: number;
-
-
   isLiked: boolean;
-
   sectionsCount: number;
 }
+export interface KursDetail{
+  id: number;
+  author: Author;
+  category: Category;
+  language: Language;
+  difficulty: Daraja;
+  title: string;
+  image: string;
+  price: number;
+  newPrice?: number;
+  rating?: number;
+  isLiked: boolean;
+  sectionsCount: number;
+  reviewsCount: number,
+  lessonsCount: number
+}
+
 type Category={
   id:number
   name:string
@@ -48,3 +50,4 @@ type Language = {
   title: string
   code: string
 }
+

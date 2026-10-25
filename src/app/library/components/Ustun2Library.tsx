@@ -1,13 +1,20 @@
 "use client"
+import { BookType } from '@/types/Library'
+import { PaginatedResultType } from '@/types/PaginatedResult'
 import { Search, X } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import React, { ChangeEvent, useState } from 'react'
+import BookItem from './Elements/BookItem'
 
-const Ustun2Library = () => {
+const Ustun2Library = ({ kitoblar, status }: { kitoblar: PaginatedResultType<BookType[] | undefined>, status: number }) => {
   const [search, setSearch] = useState("")
     const router=useRouter()
     const [page,setPage]=useState(1)
-    
+    const [books, SetBooks] = useState(kitoblar.data)
+    if (!kitoblar.data) {
+        router.replace("/library?page=" + page)
+        
+    }
 
     function searchChange(e:ChangeEvent<HTMLInputElement, HTMLInputElement>){
         const title=e.target.value
@@ -30,7 +37,9 @@ const Ustun2Library = () => {
                     <X size={24} color="#fff" onClick={()=>setSearch("")} className="ml-4"/>
                 }
             </article>
-            
+            {
+                books?.map((e,i)=><BookItem book={e} key={i} search={search}/>)
+            }
         </div>
     )
 }

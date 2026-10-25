@@ -2,6 +2,7 @@
 import "./globals.css";
 import Header from "@/components/shared/Header/Header";
 import { Footer } from "@/components/shared/Footer/Footer";
+import MainLayout from "./Home/MainLayout";
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode; }>) {
   return (
@@ -12,11 +13,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </head>
       <body className={'flex flex-col justify-between antialiased overflow-x-clip select-none'}>
-        <Header />
-        <main className="grid grow px-8 mb-12 items-start content-start">
-          {children}
-        </main>
-        <Footer />
+        <MainLayout children={children}/>
       </body>
     </html>
   );
